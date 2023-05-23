@@ -8,7 +8,7 @@ load_dotenv()
 openai_api_key = os.environ.get("OPENAI_API_KEY")
 
 llm = OpenAI(temperature=0)
-loader = YoutubeLoader.from_youtube_url("https://www.youtube.com/watch?v=lyE5d7zLxvc", add_video_info=False, language="tr")
+loader = YoutubeLoader.from_youtube_url("https://www.youtube.com/watch?v=20D6GaY-fNU", add_video_info=False, language="tr")
 docs = loader.load()
 text_splitter = CharacterTextSplitter(chunk_size=1000, separator="", chunk_overlap=0)
 split_docs = text_splitter.split_documents(docs)
